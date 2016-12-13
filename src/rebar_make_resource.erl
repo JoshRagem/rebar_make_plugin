@@ -18,7 +18,7 @@ download(Dir, {make, Source={git, _, _}}, State) ->
     rebar_utils:sh("make",[{cd, Dir}]).
 
 needs_update(Dir, {make, Source}) ->
-    rebar_git_resource:make_vsn(Dir, Source).
+    rebar_git_resource:needs_update(Dir, Source).
 
 make_vsn(Dir) ->
     rebar_git_resource:make_vsn(Dir).
