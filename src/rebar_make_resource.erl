@@ -8,7 +8,7 @@
         ,make_vsn/1]).
 
 lock(Dir, {make, Source}) ->
-    rebar_git_resource:lock(Dir, Source).
+    {make, rebar_git_resource:lock(Dir, Source)}.
 
 download(Dir, {make, Source={git, _}}, State) ->
     rebar_git_resource:download(Dir, Source, State),
